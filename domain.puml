@@ -1,0 +1,42 @@
+@startuml
+left to right direction
+skin rose
+
+' TODO: Add the domain model
+@startuml
+'Entidad biblioteca
+
+entity libro {
+    titulo
+    autor
+    categoria
+    ISBN
+    disponibilidad
+    calificacion
+
+}
+
+'Entidad socio
+
+entity socio{
+    nombre
+    apellido
+    correoelectronico
+    contraseña
+    numeroDeSocio
+    listaDeLibros
+
+}
+
+entity opciones{
+    editarSuInformacion
+    calificarLibro
+}
+
+' Asociaciones
+
+libro "1..5"--"1" socio : solicita <
+socio "1"-- "1..2" opciones : accede a  >
+@enduml
+
+@enduml

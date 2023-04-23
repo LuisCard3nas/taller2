@@ -1,0 +1,43 @@
+@startuml
+left to right direction
+skin rose
+
+class socio{
+-nombre:String
+-apellido:String
+-numerodesocio:int
+-email:String
+-listaDeLibros:String[]
+-contraseña:String
++socio(nombre:String,numerodesocio:int,listaDeLibros:String[])
++get.nombre():String
++get.numerodesocio():int
++get.apellido():String
++get.email():String
++get.contraseña():String
++set.email():String
++set.contraseña():String
+}
+class libro{
+-titulo:String
+-autor:String
+-categoria:String
+-ISBN:String
+-calificaion:double
+-disponibilidad:boolean
++libro(titulo:String,autor:String,categoria:String,ISBN:String,calificaion:double,disponibilidad:boolean)
++get.titulo:String
++get.autor:String
++get.categoria:String
++get.ISBN:double
++get.calificaion:double
++get.disponibilidad:boolean
++set.disponibilidad:boolean
++set.calificacion:double
+
+}
+socio"1..*" <---o "1..*" libro
+
+' TODO: Add the class model
+
+@enduml
